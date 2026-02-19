@@ -51,7 +51,8 @@ _main:				// Start of main function
 	// Let's start by checking to see if we have 2 arguments
 	// The number of arguments we have lives in register x0
 	// If we don't have exactly 2 arguments, go to the error function
-
+	cmp x0,#2 
+	bne error
 	ldr	x0, [x1, #8]	// Puts the file name into register x0.
 
 	// The line above puts the file name into the first argument
