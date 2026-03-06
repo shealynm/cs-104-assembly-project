@@ -120,7 +120,11 @@ loop:				// Start of the loop function
 	// To do that: put 1 in the first argument, put the value of sp
 	// in the second argument, and put 1 in the third argument
 	// A 1 in the first argument is shorthand for the screen
-	1 sp 1
+	mov x0, #1
+	mov x1, sp
+	mov x2, #1
+
+
 	mov	x16, #4		// Put the number 4 into register x16 (write)
 	svc	#0x80		// Call the write function with 3 arguments
 
