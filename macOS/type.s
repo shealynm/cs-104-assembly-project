@@ -53,7 +53,6 @@ _main:				// Start of main function
 	// If we don't have exactly 2 arguments, go to the error function
 	cmp x0,#2 
 	bne error
-	mov x1, x1
 	ldr	x0, [x1, #8]	// Puts the file name into register x0.
 
 	// The line above puts the file name into the first argument
