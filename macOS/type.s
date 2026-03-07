@@ -115,6 +115,7 @@ loop:				// Start of the loop function
 	mov	x16, #3		// Put the number 3 into register x16 (read)
 	svc	#0x80	// Call the read function with 3 arguments
 	cmp x0, #0
+	beq done
 	// After we read in a letter, we need to put that letter on the
 	// screen.
 	// To do that: put 1 in the first argument, put the value of sp
