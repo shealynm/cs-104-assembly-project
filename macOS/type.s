@@ -69,7 +69,7 @@ _main:				// Start of main function
 	// If the number is less than 0, we should go to the error function
 	// Whenever a function gives you back a number, that number will
 	// live in the x0 register.
-
+	mov x1, #0
 	cmp x0, #0 
 	blt error 
 	
