@@ -61,7 +61,7 @@ _main:				// Start of main function
 	// Now, we should tell the open function to read the file
 	// How did we say to do that in class?
 	// The second argument is always put into the x1 register
-	mov x2, #0
+	mov x1, #0
 	mov	x16, #5		// Put the number 5 into register x16 (open)
 	svc	#0x80		// Call the open function with 2 arguments
 
