@@ -60,8 +60,8 @@ _main:				// Start of main function
 	// Now, we should tell the open function to read the file
 	// How did we say to do that in class?
 	// The second argument is always put into the x1 register
-	mov x1, #0
 	mov	x16, #5		// Put the number 5 into register x16 (open)
+	mov x1, #0
 	svc	#0x80		// Call the open function with 2 arguments
 
 	// Here, we need to check the number that the open function gives
@@ -115,7 +115,6 @@ loop:				// Start of the loop function
 	mov	x16, #3		// Put the number 3 into register x16 (read)
 	svc	#0x80	// Call the read function with 3 arguments
 	cmp x0, #0
-	blt error
 	beq done
 	// After we read in a letter, we need to put that letter on the
 	// screen.
