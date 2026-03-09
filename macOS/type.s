@@ -116,6 +116,8 @@ loop:				// Start of the loop function
 	svc	#0x80	// Call the read function with 3 arguments
 	cmp x0, #0
 	beq done
+	cmp x0, #-1
+	beq error
 	// After we read in a letter, we need to put that letter on the
 	// screen.
 	// To do that: put 1 in the first argument, put the value of sp
